@@ -1,4 +1,4 @@
-var app=(function validateRegister(objReg){
+var appc=(function validateRegister(objReg){
 
 if(objReg.cid.value.length==0){
 		alert("Please enter Customer ID!");
