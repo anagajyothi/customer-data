@@ -1,8 +1,116 @@
 <html>
 <head>
 <title>login form</title>
-<script type="text/javascript" src="app.js"></script> 
+<script language="javascript">
+function validateRegister(objReg){
 
+if(objReg.cid.value.length==0){
+		alert("Please enter Customer ID!");
+		objReg.cid.focus();
+		return false;
+		}
+var z = objReg.cid.value;
+		//alert("the z"+z);
+	    if(!z.match(/^\d+/))
+	        {
+	        alert("Please  enter only numeric characters  for your Customer ID number! (Allowed input:0-9)")
+	        objReg.cid.focus();
+			return false;
+
+		}
+
+	if(objReg.cfname.value.length==0){
+		alert("Please enter Customer Name!");
+		objReg.cfname.focus();
+		return false;
+		}
+	if(objReg.clname.value.length==0){
+		alert("Please enter Customer Name!");
+		objReg.clname.focus();
+		return false;
+		}
+	if(objReg.cmobile.value.length==0){
+		alert("Please enter phoneNo !");
+		objReg.cmobile.focus();
+		return false;
+		}
+
+		var z = objReg.cmobile.value;
+		//alert("the z"+z);
+	    if(!z.match(/^\d+/))
+	        {
+	        alert("Please  enter only numeric characters  for your phone number! (Allowed input:0-9)")
+	        objReg.cmobile.focus();
+			return false;
+
+		}
+	    var z = objReg.cmobile.value;
+		//alert("the z"+z);
+	    if(!z.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/))
+	        {
+	        alert("Please  enter 10 digit correct number for your phone number! (Allowed input:0-9)")
+	        objReg.cmobile.focus();
+			return false;
+
+		}
+
+	if(objReg.cemail.value.length==0){
+		alert("Please enter passenger email !");
+		objReg.cemail.focus();
+		return false;
+		}
+	var z = objReg.cemail.value;
+	//alert("the z"+z);
+    if(!z.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+        {
+        alert("Please  enter valid EMAIL ID")
+        objReg.cmobile.focus();
+		return false;
+
+	}
+	if(objReg.caddress.value.length==0){
+		alert("Please enter Address of Customer !");
+		objReg.caddress.focus();
+		return false;
+		}
+
+
+
+	return true;
+}
+</script>
+    
+    <style type="text/css">
+        body{
+margin: 0;
+padding: 0;
+}
+.bgimg{
+width: 100%;
+height:100vh;
+backgroung-image: linear-gradient(27deg, #004E95 50%, #023066 50%);
+}
+.centerdiv{
+width: 350px;
+height: 400px;
+position: absolute;
+top: 50%;
+left 50%;
+background-color: ;
+transform: translate(-50%,-50%);
+backgroung-image: linear-gradient(27deg, #023066 50%, #004E95 50%);
+
+}
+#profilepic{
+width: 120px;
+height: 120ph;
+border-redius: 50%;
+position: relative;
+top: -60px;
+left: calc((350px-120px)/2);
+}
+    
+</style>
 </head>
 <body>
 <div class="bgimg">
