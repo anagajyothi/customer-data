@@ -1,6 +1,7 @@
+
 <html>
 <head>
-<title>login form</title>
+
 <script language="javascript">
 function validateRegister(objReg){
 
@@ -16,7 +17,7 @@ var z = objReg.cid.value;
 	        alert("Please  enter only numeric characters  for your Customer ID number! (Allowed input:0-9)")
 	        objReg.cid.focus();
 			return false;
-
+		
 		}
 
 	if(objReg.cfname.value.length==0){
@@ -34,7 +35,7 @@ var z = objReg.cid.value;
 		objReg.cmobile.focus();
 		return false;
 		}
-
+		
 		var z = objReg.cmobile.value;
 		//alert("the z"+z);
 	    if(!z.match(/^\d+/))
@@ -42,7 +43,7 @@ var z = objReg.cid.value;
 	        alert("Please  enter only numeric characters  for your phone number! (Allowed input:0-9)")
 	        objReg.cmobile.focus();
 			return false;
-
+		
 		}
 	    var z = objReg.cmobile.value;
 		//alert("the z"+z);
@@ -51,9 +52,9 @@ var z = objReg.cid.value;
 	        alert("Please  enter 10 digit correct number for your phone number! (Allowed input:0-9)")
 	        objReg.cmobile.focus();
 			return false;
-
+		
 		}
-
+	
 	if(objReg.cemail.value.length==0){
 		alert("Please enter passenger email !");
 		objReg.cemail.focus();
@@ -66,31 +67,36 @@ var z = objReg.cid.value;
         alert("Please  enter valid EMAIL ID")
         objReg.cmobile.focus();
 		return false;
-
+	
 	}
 	if(objReg.caddress.value.length==0){
 		alert("Please enter Address of Customer !");
 		objReg.caddress.focus();
 		return false;
 		}
-
-
-
+	
+	
+	
 	return true;
 }
+
+
+
 </script>
-    
-    
 </head>
-<body>
-<div class="bgimg">
-<div class="centerdiv">
-    <center>
+
+
+<body bgcolor="wheat">
+<center>
 <img src="https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-128.png">
-        </center>
-<form name="UserForm" method="post" onsubmit="return validateForm()" action=success.html>
+</center>
+
+
+<form name="UserForm" method="get" action=/customer.html onsubmit="return validateRegister(this);">
 
 <center>
+
+
 
 <label for="cust">Customer Details</label><BR><BR>
 
@@ -114,12 +120,18 @@ cols="32"></textarea><BR><BR>
 
 
     <button type="submit" class="button" >Submit</button>
-    </center>
+</center></form>
 
 
-</form>
-</div>
-</div>
- 
+
+
 </body>
+
 </html>
+
+
+
+
+
+
+
